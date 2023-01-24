@@ -1,0 +1,476 @@
+{
+  "usuario": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//input[@formcontrolname='email']"
+  },
+
+  "contrasena": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//input[@formcontrolname='pwd']"
+  },
+
+  "iniciarSesion": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//button[contains(.,' INI')]//span)[1]"
+  },
+
+  "menu": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//button[contains(.,'menu')]//mat-icon)[1]"
+  },
+
+  "Plan anual": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//mat-panel-title[contains(.,'PAA')]//span)"
+  },
+
+  "PAA": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//button[contains(.,'PAA')]//span)"
+  },
+
+  "Bandeja tareas": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//button[contains(.,'Bandeja de tareas')]//span)"
+  },
+
+  "Modificaciones solicitadas": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//button[contains(.,'Modificaciones solicitadas')]//span)"
+  },
+
+  "filtro": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//button[@class='mat-focus-indicator Fil mat-button mat-button-base ng-star-inserted']"
+  },
+
+  "Ordenar por": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//mat-expansion-panel-header)[6]"
+  },
+
+  "Subsecretaria": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//span)[57]"
+  },
+
+  "filtrar": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//button[contains(.,'Fil')]//span)[1]"
+  },
+
+  "filtrar1": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//button[contains(.,'Filtrar')])[2]"
+  },
+
+  "Buscar por:": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//mat-expansion-panel-header[contains(.,'Buscar Por')]//span)[1]"
+  },
+
+  "codigo proyecto": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//input[@formcontrolname='CodigoProyecto']"
+  },
+
+  "N solicitud": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//input[@formcontrolname='NumeroSolicitud']"
+  },
+
+  "seleccionar": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//span)[54]"
+  },
+
+  "requerimiento": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//mat-icon[@mattooltip='Requerimientos'])"
+  },
+
+  "resumen": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//div[contains(.,' insert_drive_file ')]//mat-icon)[4]"
+  },
+
+  "aprobar": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//div[contains(.,' pan_tool_alt')]//mat-icon)[5]"
+  },
+
+  "detener": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//mat-icon[@mattooltip='Detener Ejecucion']"
+  },
+
+  "numero requerimiento": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//input[@formcontrolname='NumeroRequerimiento'])"
+  },
+
+  "regresar": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//button[contains(.,' REGRESAR ')]//span)[1]"
+  },
+
+  "propiedadRequerimiento": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//mat-icon[@mattooltip='Propiedades requerimiento']"
+  },
+
+  "cancelar": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//button[contains(.,' CANCELAR')]//span)[1]"
+  },
+
+  "solicitarModificaicon": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//button[contains(.,'SOLICITAR MODIFICACI')]//span)[2]"
+  },
+
+  "cancelarModi": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//button[contains(.,' Cancelar')]//span)[1]"
+  },
+
+  "crearNuevo": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//button[contains(.,' Nuevo')]//span)[1]"
+  },
+
+  "Modificacion": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//button[contains(.,' M')]//span)[1]"
+  },
+
+  "SeleccionarReque": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//span[@class='mat-checkbox-inner-container mat-checkbox-inner-container-no-side-margin'])[1]"
+  },
+
+  "Anadir": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//button[contains(.,' A')]//span)[1]"
+  },
+
+  "Cancelar": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//button[contains(.,'Cancelar')]//span)[4]"
+  },
+
+  "Tablarequerimiento": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//table[contains(.,' 601')]//td)"
+  },
+
+  "contrapartida": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//button[contains(.,' Contrapartida ')]//span)[1]"
+  },
+
+  "descripcion": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//textarea[@formcontrolname='Descripcion']"
+  },
+
+  "aumenta": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//input[@formcontrolname='ValorAumenta']"
+  },
+
+  "disminuye": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//input[@formcontrolname='ValorDisminuye']"
+  },
+
+  "informacionBasica": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//mat-expansion-panel-header[contains(.,'Informaci')])"
+  },
+
+  "requerimeinto": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//input[@formcontrolname='numeroReq']"
+  },
+
+  "dependencia": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//input[@formcontrolname='dependenciaDes']"
+  },
+
+  "mesinicio": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//mat-select[@formcontrolname='mesSeleccion']//span)"
+  },
+
+  "mesoferta": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//mat-select[@formcontrolname='mesOfertas']//span)"
+  },
+
+  "mescontrato": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//mat-select[@formcontrolname='mesContrato']//span)"
+  },
+
+  "listadespegable": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//mat-option"
+  },
+
+  "meses": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//input[@formcontrolname='duracionMes']"
+  },
+
+  "dias": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//input[@formcontrolname='duracionDias']"
+  },
+
+  "seleccion": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//input[@formcontrolname='modalidadSel']"
+  },
+
+  "contractual": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//mat-select[@formcontrolname='actuacionCont']//span"
+  },
+
+  "contrato": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//mat-select[@formcontrolname='tipoCont']//span"
+  },
+
+  "NumContrato": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//input[@formcontrolname='numeroCont']"
+  },
+
+  "perfil": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//mat-select[@formcontrolname='perfil']//span"
+  },
+
+  "honorario": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//input[@formcontrolname='valorHonMes']"
+  },
+
+  "contratos": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//input[@formcontrolname='cantidadCont']"
+  },
+
+  "descripcioncontrato": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//textarea[@formcontrolname='descripcion']"
+  },
+
+  "clasificacionPresupuestal": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//mat-expansion-panel-header[contains(.,'Clasificaci')])"
+  },
+
+  "mes": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//mat-select[@formcontrolname='mes']"
+  },
+
+  "recursos": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//mat-select[@formcontrolname='anioVigRecursos']"
+  },
+
+  "auxiliar": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//mat-select[@formcontrolname='auxiliar']"
+  },
+
+  "detallefuente": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//mat-select[@formcontrolname='fuente']"
+  },
+
+  "actividad": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//mat-select[@formcontrolname='actividad']"
+  },
+
+  "MGA": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//input[@formcontrolname='mga']"
+  },
+
+  "POSPRE": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//input[@formcontrolname='pospre']"
+  },
+
+  "codigoUNSP": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//mat-expansion-panel-header[contains(.,'UNSPSC')])"
+  },
+
+  "UNSPSC": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//input[@formcontrolname='codCategoria']"
+  },
+
+  "anadirr": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//button[contains(.,' A')])[2]"
+  },
+
+  "aprobacionInicial": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//mat-expansion-panel-header[contains(.,'Inicial')])"
+  },
+
+  "revisiones": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//mat-expansion-panel-header[contains(.,'Revisiones')]"
+  },
+
+  "area": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//mat-select[@formcontrolname='area']//span)"
+  },
+
+  "concepto": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//mat-select[@formcontrolname='concepto']//span)"
+  },
+
+  "obser": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//input[@formcontrolname='observaciones'])"
+  },
+
+  "anadrr": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//button[contains(.,'A')])[2]"
+  },
+
+  "reservado": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//button[contains(.,' REVISADO')])"
+  },
+
+  "guardar": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//button[contains(.,' GUARDAR')])"
+  },
+
+  "guardarModifi": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//button[contains(.,' Guardar')])"
+  },
+
+  "propiedades": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//div[contains(.,'insert_drive_file')]//mat-icon)[2]"
+  },
+
+  "solicitud modificacion": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//div[contains(.,'insert_drive_file')]//mat-icon)[3]"
+  },
+
+  "fuente": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//mat-select[@formcontrolname='fuentes']//span"
+  },
+
+  "fuenteResumen": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//mat-select[@id='mat-select-36']//span"
+  },
+
+  "Resume": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//button[contains(.,' Resume')])"
+  },
+
+  "anadir contra": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//button[contains(.,'A')])[2]"
+  },
+
+  "anadir justificacion": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//textarea[@placeholder='Se requiere modificar']"
+  },
+
+  "aceptar": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//button[contains(.,'ACEPTAR')])//span[1]"
+  },
+
+  "enviar": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//button[contains(.,'Enviar')])//span[1]"
+  },
+
+  "cerrarSesion": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//mat-icon[contains(.,'exit_to_app')]"
+  },
+
+  "fechaPresentacion": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//input[@formcontrolname='FechaPresentacion']"
+  },
+
+  "editar": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//mat-icon[contains(.,'edit')]"
+  },
+
+  "check1": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//mat-checkbox[@class='mat-checkbox mat-accent']//span)[1]"
+  },
+
+  "check2": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//mat-checkbox[@id='mat-checkbox-41'])"
+  },
+
+  "check3": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//mat-checkbox[@class='mat-checkbox mat-accent']//span)[17]"
+  },
+
+  "check4": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//mat-checkbox[@class='mat-checkbox mat-accent']//span)[25]"
+  },
+
+  "enviar revisiones": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//button[contains(.,'Enviar Revisiones')]"
+  },
+
+  "estado": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//mat-select[@formcontrolname='Estado']"
+  },
+
+  "cometarioRevision": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//textarea[@class='contDataArea ng-untouched ng-pristine ng-valid']"
+  },
+
+  "aproba": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//button[contains(.,'APROBAR')]"
+  },
+
+  "adjuntar": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//input[@type='file'])"
+  }
+}

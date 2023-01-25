@@ -132,5 +132,160 @@
   "informacionBasicaProyecto": {
     "GetFieldBy": "Xpath",
     "ValueToFind": "(//mat-expansion-panel-header)[5]"
+  },
+
+  "mesclasificacion": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//mat-select[@formcontrolname='mes']"
+  },
+
+  "fecharecurso": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//mat-select[@formcontrolname='anioVigRecursos']"
+  },
+
+  "auxiliar": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//mat-select[@formcontrolname='auxiliar']"
+  },
+
+  "detallefuente": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//mat-select[@formcontrolname='fuente']"
+  },
+
+  "actividad": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//mat-select[@formcontrolname='actividad']"
+  },
+
+  "anadir": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//button/span[contains(.,'ADIR')])[1]"
+  },
+
+  "editarcadena": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//mat-icon[contains(.,'edit')])[1]"
+  },
+
+  "valoraumenta": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//input[@formcontrolname='subAumenta']"
+  },
+
+  "Aceptar": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//button/span[contains(.,'ACEPTAR')])[1]"
+  },
+
+  "codigoUNSPSC": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//mat-expansion-panel-header)[7]"
+  },
+
+  "UNSPSC": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//input[@formcontrolname='codCategoria']"
+  },
+
+  "anadi": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//button/span[contains(.,'ADIR')])[2]"
+  },
+
+  "Guardar": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//button/span[contains(.,'GUARDAR')])"
+  },
+
+  "justificacion": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//textarea[@placeholder='Se requiere modificar']"
+  },
+
+  "adjuntar": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//input[@type='file']"
+  },
+
+  "Guarda": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//button/span[contains(.,'Guardar')])"
+  },
+
+  "solicitudM": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//mat-icon[contains(.,' insert_drive_file')]"
+  },
+
+  "Enviar": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//button/span[contains(.,'Enviar')])"
+  },
+
+  "Si": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//button[contains(.,'SI')])"
+  },
+
+  "Contrapartida": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//button/span[contains(.,'Contrapartida')])"
+  },
+
+  "detalles": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//mat-select[@formcontrolname='fuentes']"
+  },
+
+  "descripcio": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "Descripcion"
+  },
+
+  "ValorA": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "Descripcion"
+  },
+
+  "Agregar": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//button/span[contains(.,'adir')])"
+  },
+
+  "salir": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//mat-icon[contains(.,'exi')])"
+  },
+
+  "Modificaciones solicitades": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//button/span[contains(.,'Modificaciones solicitadas')]"
+  },
+
+  "editarrequerimiento": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//mat-icon[contains(.,'edit')])[1]"
+  },
+
+  "area": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//mat-select[@formcontrolname='area']"
+  },
+
+  "concepto": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//mat-select[@formcontrolname='concepto']"
+  },
+
+  "observacion": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//input[@formcontrolname='observaciones']"
+  },
+
+  "Revisado": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//button/span[contains(.,'REVISADO')])[1]"
   }
 }

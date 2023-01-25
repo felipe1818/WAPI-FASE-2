@@ -31,3 +31,55 @@ Característica: El usuario crea y añade CDPs/RPs
 
     Dado ingresar contidad contratos "" y descripcion ""
     Cuando ingresa mes "" fecha recursos "" y auxuliar ""
+    Entonces agregar detalle fuente "" y actividad ""
+
+    Dado seleccionar "anadir"
+    Cuando editamos cadena presupuestal
+    Entonces agregar un valor ""
+
+    Dado seleccionar "Aceptar"
+    Cuando agregar codigo UNSPSC ""
+    Entonces seleccionar "anadi"
+
+    Dado seleccionar "Guardar"
+    Cuando seleccionar "Aceptar"
+    Entonces agregar justificacion "Prueba"
+
+    Dado adjuntar archivo pdf
+    Cuando seleccionar "Guarda"
+    Entonces seleccionar "Aceptar"
+
+    Dado ingresar al requerimiento
+    Cuando seleccionar "Contrapartida"
+    Entonces agregamos descripcion "Prueba" y valor
+
+    Dado seleccionar "Agregar"
+    Cuando seleccionar "Guarda"
+    Entonces seleccionar "Aceptar"
+
+    Dado seleccionar "Enviar"
+    Cuando seleccionar "Si"
+    Entonces seleccionar "Aceptar"
+
+    #Revisar requerimiento
+
+    Dado cerrar sesion
+    Cuando Ingresar usuario "userwapi03@saludcapital.gov.co" y  contraseña "112233"
+    Entonces Ingresamos a la pantalla "Modificaciones solicitades"
+
+    Dado ingresar al requerimiento
+    Cuando revisar requermiento
+    Entonces agregar area "Planeación", concepto "Aprobado" y una observacion "El requerimiento cumple todas lo solicitado"
+
+    Dado seleccionar "Anadir"
+    Cuando seleccionar "Revisado"
+    Entonces cerrar sesion
+
+    #Aprobar requerimiento
+
+    Dado Ingresar usuario "userwapi02@saludcapital.gov.co" y  contraseña "112233"
+    Cuando Ingresamos a la pantalla "Modificaciones solicitades"
+    Entonces ingresar al requerimiento
+
+
+

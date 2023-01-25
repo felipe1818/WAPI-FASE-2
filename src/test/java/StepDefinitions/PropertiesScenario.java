@@ -1,6 +1,7 @@
 package StepDefinitions;
 
 import Functions.SeleniumFunctions;
+import io.cucumber.java.an.Cuan;
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
@@ -71,7 +72,9 @@ public class PropertiesScenario {
     public void agregamosnumerorequerimeitndependencia(String numerorequerimiento, String dependenciadestino) throws Exception {
         functions.iLoadTheDOMInformation("Principal.json");
         functions.iSetElementWithText("numerorequerimiento", numerorequerimiento);
+
         functions.iSetElementWithText("dependenciadestino", dependenciadestino);
+        functions.iSelectContainsText("listadespegable", dependenciadestino);
     }
 
     @Entonces("agregar fecha estiamdo inicio {string}, mes estiamdo presentacion {string} y mes inicio ejecucion {string}")
@@ -136,8 +139,114 @@ public class PropertiesScenario {
         functions.iClicInElement("informacionBasicaProyecto");
     }
     @Cuando("ingresa mes {string} fecha recursos {string} y auxuliar {string}")
-    public void ingresarmesfecharecursosauxiliar(){
+    public void ingresarmesfecharecursosauxiliar(String mesclasificacion, String fecharecurso, String auxiliar) throws Exception {
+        functions.iLoadTheDOMInformation("Principal.json");
+        functions.scrollToElement("mesclasificacion");
+        functions.iClicInElement("mesclasificacion");
+        functions.iSelectContainsText("listadespegable", mesclasificacion);
 
+        functions.scrollToElement("fecharecurso");
+        functions.iClicInElement("fecharecurso");
+        functions.iSelectContainsText("listadespegable", fecharecurso);
+
+        functions.scrollToElement("auxiliar");
+        functions.iClicInElement("auxiliar");
+        functions.iSelectContainsText("listadespegable", auxiliar);
     }
+
+    @Entonces("agregar detalle fuente {string} y actividad {string}")
+    public void agregardetallefuenteactividad(String detallefuente, String actividad) throws Exception {
+        functions.iLoadTheDOMInformation("Principal.json");
+        functions.scrollToElement("detallefuente");
+        functions.iClicInElement("detallefuente");
+        functions.iSelectContainsText("listadespegable", detallefuente);
+        functions.iSaveTextOfElementInScenario("detalle", detallefuente);
+
+        functions.scrollToElement("actividad");
+        functions.iClicInElement("actividad");
+        functions.iSelectContainsText("listadespegable", actividad);
+    }
+
+    @Cuando("editamos cadena presupuestal")
+    public void editacadenapresupuestal() throws Exception {
+        functions.iLoadTheDOMInformation("Principal.json");
+        functions.scrollToHorizontal("editarcadena");
+        functions.iClicInElement("editarcadena");
+    }
+
+    @Entonces("agregar un valor {string}")
+    public void agregarvalor(String valoraumenta) throws Exception {
+        functions.iLoadTheDOMInformation("Principal.json");
+        functions.iSetElementWithText("valoraumenta", valoraumenta);
+        functions.iSaveTextOfElementInScenario("valordismunuye", valoraumenta);
+    }
+
+    @Cuando("agregar codigo UNSPSC {string}")
+    public void agregarcodigoUNSPSC(String UNSPSC) throws Exception {
+        functions.iLoadTheDOMInformation("Principal.json");
+        functions.scrollToElement("codigoUNSPSC");
+        functions.iClicInElement("codigoUNSPSC");
+
+        functions.scrollToElement("UNSPSC");
+        functions.iSetElementWithText("UNSPSC", UNSPSC);
+        functions.iSelectContainsText("listadespegable", UNSPSC);
+    }
+
+    @Entonces("agregar justificacion {string}")
+    public void agregarjustificacion(String justificacion) throws Exception {
+        functions.iLoadTheDOMInformation("Principal.json");
+        functions.iSetElementWithText("justificacion", justificacion);
+    }
+
+    @Dado("adjuntar archivo pdf")
+    public void adjuntararchivopdf() throws Exception {
+        functions.iLoadTheDOMInformation("Principal.json");
+        functions.SaveInScenarioFile("documento", "pdf");
+        functions.iSetElementWithKeyValue("adjuntar", "documento");
+    }
+
+    @Dado("ingresar al requerimiento")
+    public void ingresarrequerimeitno() throws Exception {
+        functions.iLoadTheDOMInformation("Principal.json");
+        functions.scrollToHorizontal("solicitudM");
+        functions.iClicInElement("solicitudM");
+    }
+
+    @Entonces("agregamos descripcion {string} y valor")
+    public void agreamosdescripcionvalor(String descripcion) throws Exception {
+        functions.iLoadTheDOMInformation("Principal.json");
+        functions.iSetElementWithKeyValue("detalles", "detalle");
+        functions.iSetElementWithText("descripcio", descripcion);
+        functions.iSetElementWithKeyValue("ValorA", "valordismunuye");
+    }
+
+    @Dado("cerrar sesion")
+    public void cerrarsecion() throws Exception {
+        functions.iLoadTheDOMInformation("Principal.json");
+        functions.iClicInElement("Menu");
+        functions.iClicInElement("salir");
+    }
+
+    @Cuando("revisar requermiento")
+    public void revisarrequerimiento() throws Exception {
+        functions.iLoadTheDOMInformation("Principal.json");
+        functions.scrollToHorizontal("editarrequerimiento");
+        functions.iClicInElement("editarrequerimiento");
+    }
+
+   @Entonces("agregar area {string}, concepto {string} y una observacion {string}")
+    public void agregaareaconceptoobservaiones(String area, String concepto, String observacion) throws Exception {
+        functions.iLoadTheDOMInformation("Principal.json");
+       functions.scrollToElement("area");
+       functions.iClicInElement("area");
+       functions.iSelectContainsText("listadespegable", area);
+
+       functions.scrollToElement("concepto");
+       functions.iClicInElement("concepto");
+       functions.iSelectContainsText("listadespegable", concepto);
+
+       functions.scrollToElement("concepto");
+       functions.iSetElementWithText("observacion", observacion);
+   }
 
 }

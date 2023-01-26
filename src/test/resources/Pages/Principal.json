@@ -287,5 +287,50 @@
   "Revisado": {
     "GetFieldBy": "Xpath",
     "ValueToFind": "(//button/span[contains(.,'REVISADO')])[1]"
+  },
+
+  "Cancelar": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//button/span[contains(.,'CANCELAR')])[1]"
+  },
+
+  "Enviar revisiones": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//button/span[contains(.,'Enviar Revisiones')])[1]"
+  },
+
+  "comentario": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//textarea[@placeholder='Longitud 250']"
+  },
+
+  "Aprobar": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//button/span[contains(.,'APROBAR')])[1]"
+  },
+
+  "adjuntarxlsx": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//input[@type='file'])[1]"
+  },
+
+  "codigorequerimiento": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//input[@formcontrolname='NumeroRequerimiento'])[1]"
+  },
+
+  "CDPs": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//mat-icon[@mattooltip='CDP'])[1]"
+  },
+
+  "RPs": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//mat-icon[@mattooltip='CDP'])[1]"
+  },
+
+  "fechaejecucion": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//mat-select[@formcontrolname='mesContrato']"
   }
 }

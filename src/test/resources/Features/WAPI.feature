@@ -22,23 +22,23 @@ Característica: El usuario crea y añade CDPs/RPs
     #Crear requerimiento
 
     Dado seleccionar "Nuevo"
-    Cuando agregamos Numero de requerimiento "" y dependencia destino ""
-    Entonces agregar fecha estiamdo inicio "", mes estiamdo presentacion "" y mes inicio ejecucion ""
+    Cuando agregamos Numero de requerimiento "7" y dependencia destino "000000"
+    Entonces agregar fecha estiamdo inicio "Enero", mes estiamdo presentacion "Febrero" y mes inicio ejecucion "Junio"
 
-    Dado ingresar la duracion estimada del contrato Mes "" Dias ""
-    Cuando ingresar modalidad seleccion "" y actuacion contractual ""
-    Entonces ingresar tipo contrato "" perfil "" valor Honorario ""
+    Dado ingresar la duracion estimada del contrato Mes "11" Dias "9"
+    Cuando ingresar modalidad seleccion "CCE-02" y actuacion contractual "Adici"
+    Entonces ingresar tipo contrato "Nombre por defecto" perfil "Profesional Especializado_1B" valor Honorario "14000000"
 
-    Dado ingresar contidad contratos "" y descripcion ""
-    Cuando ingresa mes "" fecha recursos "" y auxuliar ""
-    Entonces agregar detalle fuente "" y actividad ""
+    Dado ingresar contidad contratos "1" y descripcion "Prueba"
+    Cuando ingresa mes "Febrero" fecha recursos "2022" y auxuliar "175"
+    Entonces agregar detalle fuente "7" y actividad "1.6"
 
     Dado seleccionar "anadir"
     Cuando editamos cadena presupuestal
-    Entonces agregar un valor ""
+    Entonces agregar un valor "10000000"
 
     Dado seleccionar "Aceptar"
-    Cuando agregar codigo UNSPSC ""
+    Cuando agregar codigo UNSPSC "46171500"
     Entonces seleccionar "anadi"
 
     Dado seleccionar "Guardar"
@@ -81,5 +81,24 @@ Característica: El usuario crea y añade CDPs/RPs
     Cuando Ingresamos a la pantalla "Modificaciones solicitades"
     Entonces ingresar al requerimiento
 
+    Dado revisar requermiento
+    Cuando seleccionar "Cancelar"
+    Entonces seleccionar "Enviar revisiones"
 
+    Dado agregar un comentario de la revision "Prueba"
+    Cuando seleccionar "Aprobar"
+    Entonces seleccionar "Aceptar"
 
+  @ImportarCDPsRPs
+  Escenario: El usuario importa CDPs
+
+    Dado Ingresamos a la pantalla "PAA"
+    Cuando adjuntar archivo xlsx
+    Entonces seleccionar "Aceptar"
+
+    Dado filtramos codigo del proyecto "7835"
+    Cuando seleccionamos proyecto
+    Entonces filtrar numero requerimiento
+
+    Dado seleccionar "CDPs"
+    Cuando ingresar al RPs

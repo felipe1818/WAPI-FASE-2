@@ -1178,6 +1178,42 @@ public class SeleniumFunctions {
         attachKey(key);
     }
 
+    public void SaveInScenarioFiles(String key, String format) throws IOException {
+
+        String directoryName = new SeleniumFunctions().getCurrentDirectory();
+
+        //long numer = System.currentTimeMillis();
+
+        //String fileName = ("Prueba-" + numer);
+        String fileName = "Prueba";
+        Path originalPath = Paths.get(("src/test/resources/Files/Base/Prueba." + format + ""));
+        Path text = Paths.get("src/test/resources/Files/" + fileName + "." + format + "");
+
+        String ruta0 = directoryName.replace("target/test-classes/", "") + text.toString();
+        String ruta1 = ruta0.substring(1);
+
+
+        Files.copy(originalPath, text, StandardCopyOption.REPLACE_EXISTING);
+        String ruta = ruta1.replace('/', '\\');
+        if (!this.ScenaryData.containsKey(key)) {
+
+            this.ScenaryData.put(key, ruta);
+            this.ScenaryData.put(key + ".name", fileName);
+
+            log.info(String.format("Se creo un archivo en la variable %s en la ruta: %s ", key, text));
+        } else {
+
+
+            this.ScenaryData.replace(key, ruta);
+
+            this.ScenaryData.replace(key + ".name", fileName);
+            log.info(String.format("Se actualizo una variable de archivo key: %s with value: %s ", key, text));
+
+
+        }
+        attachKey(key);
+    }
+
 
     public void readMain(String ambiente) {
 

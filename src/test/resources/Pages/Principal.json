@@ -241,12 +241,12 @@
 
   "descripcio": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "Descripcion"
+    "ValueToFind": "//textarea[@formcontrolname='Descripcion']"
   },
 
   "ValorA": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "Descripcion"
+    "ValueToFind": "//input[@formcontrolname='ValorDisminuye']"
   },
 
   "Agregar": {
@@ -309,9 +309,14 @@
     "ValueToFind": "(//button/span[contains(.,'APROBAR')])[1]"
   },
 
-  "adjuntarxlsx": {
+  "adjuntarCDPxlsx": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "(//input[@type='file'])[1]"
+    "ValueToFind": "//mat-icon[contains(.,' attach_money ')]/../input"
+  },
+
+  "adjuntarGIROSxlsx": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//mat-icon[contains(.,' autorenew ')]/../input"
   },
 
   "codigorequerimiento": {
@@ -326,11 +331,21 @@
 
   "RPs": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "(//mat-icon[@mattooltip='CDP'])[1]"
+    "ValueToFind": "(//a)[6]"
   },
 
   "fechaejecucion": {
     "GetFieldBy": "Xpath",
     "ValueToFind": "//mat-select[@formcontrolname='mesContrato']"
+  },
+
+  "clasificacionpresupuestal": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//mat-expansion-panel-header)[6]"
+  },
+
+  "Revicion": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//mat-expansion-panel-header)[9]"
   }
 }

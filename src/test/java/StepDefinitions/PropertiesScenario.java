@@ -15,7 +15,8 @@ public class PropertiesScenario {
     SeleniumFunctions functions = new SeleniumFunctions();
     @Dado("el usuario ingresa a la plataforma")
     public void usaurioingresaplataforma() throws Exception {
-        functions.switchToNewTab("https://dev.wapi.saludcapital.gov.co/#/Login", "Wapi");
+        functions.switchToNewTab("https://qas2.wapi.saludcapital.gov.co/#/Login", "Wapi");
+        //functions.switchToNewTab("https://dev.wapi.saludcapital.gov.co/#/Login", "wapi");
         functions.attachScreenShot();
     }
 
@@ -44,6 +45,7 @@ public class PropertiesScenario {
             functions.scrollToElement(pantalla);
             functions.iClicInElement(pantalla);
         }
+        functions.attachScreenShot();
     }
 
     @Dado("filtramos codigo del proyecto {string}")
@@ -84,9 +86,11 @@ public class PropertiesScenario {
         functions.iLoadTheDOMInformation("Principal.json");
         functions.iSetElementWithText("numerorequerimiento", numerorequerimiento);
         functions.iSaveTextOfElementInScenario("numeroreq", "numerorequerimiento");
+        functions.iWaitTime(1);
 
         functions.iSetElementWithText("dependenciadestino", dependenciadestino);
         functions.iSelectContainsText("listadespegable", dependenciadestino);
+        functions.iWaitTime(1);
     }
 
     @Entonces("agregar fecha estiamdo inicio {string}, mes estiamdo presentacion {string} y mes inicio ejecucion {string}")
@@ -116,10 +120,12 @@ public class PropertiesScenario {
         functions.scrollToElement("modalidadseleccion");
         functions.iClicInElement("modalidadseleccion");
         functions.iSelectContainsText("listadespegable", modalidadseleccion);
+        functions.iWaitTime(1);
 
         functions.scrollToElement("actuacioncontractual");
         functions.iClicInElement("actuacioncontractual");
         functions.iSelectContainsText("listadespegable", actuacioncontractual);
+        functions.iWaitTime(1);
     }
 
     @Entonces("ingresar tipo contrato {string} perfil {string} valor Honorario {string}")
@@ -128,13 +134,16 @@ public class PropertiesScenario {
         functions.scrollToElement("tipocontrato");
         functions.iClicInElement("tipocontrato");
         functions.iSelectContainsText("listadespegable", tipocontrato);
+        functions.iWaitTime(1);
 
         functions.scrollToElement("perfil");
         functions.iClicInElement("perfil");
         functions.iSelectContainsText("listadespegable", perfil);
+        functions.iWaitTime(1);
 
         functions.scrollToElement("valorhonorario");
         functions.iSetElementWithText("valorhonorario", valorhonorario);
+        functions.iWaitTime(1);
     }
 
     @Dado("ingresar contidad contratos {string} y descripcion {string}")
@@ -142,15 +151,20 @@ public class PropertiesScenario {
         functions.iLoadTheDOMInformation("Principal.json");
         functions.scrollToHorizontal("cantidadcontrato");
         functions.iSetElementWithText("cantidadcontrato", cantidadcontrato);
+        functions.iWaitTime(1);
 
         functions.scrollToHorizontal("descripcion");
         functions.iSetElementWithText("descripcion", descripcion);
+        functions.iWaitTime(1);
 
-        functions.iClicInElement("informacionBasicaProyecto");
+        //functions.iClicInElement("informacionBasicaProyecto");
     }
     @Cuando("ingresa mes {string} fecha recursos {string} y auxuliar {string}")
     public void ingresarmesfecharecursosauxiliar(String mesclasificacion, String fecharecurso, String auxiliar) throws Exception {
         functions.iLoadTheDOMInformation("Principal.json");
+        functions.scrollToElement("clasificacionpresupuestal");
+        functions.iClicInElement("clasificacionpresupuestal");
+
         functions.scrollToElement("mesclasificacion");
         functions.iClicInElement("mesclasificacion");
         functions.iSelectContainsText("listadespegable", mesclasificacion);
@@ -224,29 +238,51 @@ public class PropertiesScenario {
 
     @Entonces("agregamos descripcion {string} y valor")
     public void agreamosdescripcionvalor(String descripcion) throws Exception {
-        functions.iLoadTheDOMInformation("Principal.json");
-        functions.iSetElementWithKeyValue("detalles", "detalle");
-        functions.iSetElementWithText("descripcio", descripcion);
-        functions.iSetElementWithKeyValue("ValorA", "valordismunuye");
+        try{
+            functions.iLoadTheDOMInformation("Principal.json");
+            functions.iClicInElement("detalles");
+            functions.iSetElementWithKeyValue("listadespegable", "detalle");
+            functions.iSetElementWithText("descripcio", descripcion);
+            functions.iSetElementWithKeyValue("ValorA", "valordismunuye");
+        }catch (Exception e){
+            functions.iClicInElement("detalles");
+            functions.iSetElementWithKeyValue("listadespegable", "detalle");
+            functions.iSetElementWithText("descripcio", descripcion);
+            functions.iSetElementWithKeyValue("ValorA", "valordismunuye");
+        }
     }
 
     @Dado("cerrar sesion")
     public void cerrarsecion() throws Exception {
-        functions.iLoadTheDOMInformation("Principal.json");
-        functions.iClicInElement("Menu");
-        functions.iClicInElement("salir");
+        try{
+            functions.iLoadTheDOMInformation("Principal.json");
+            functions.iWaitTime(2);
+            functions.iClicInElement("Menu");
+            functions.iWaitTime(2);
+            functions.iClicInElement("salir");
+        }catch (Exception e){
+            functions.iClicInElement("salir");
+        }
     }
 
     @Cuando("revisar requermiento")
     public void revisarrequerimiento() throws Exception {
-        functions.iLoadTheDOMInformation("Principal.json");
-        functions.scrollToHorizontal("editarrequerimiento");
-        functions.iClicInElement("editarrequerimiento");
+        try{
+            functions.iLoadTheDOMInformation("Principal.json");
+            functions.scrollToHorizontal("editarrequerimiento");
+            functions.iClicInElement("editarrequerimiento");
+        }catch (Exception e){
+            functions.scrollToHorizontal("editarrequerimiento");
+            functions.iClicInElement("editarrequerimiento");
+        }
     }
 
    @Entonces("agregar area {string}, concepto {string} y una observacion {string}")
     public void agregaareaconceptoobservaiones(String area, String concepto, String observacion) throws Exception {
         functions.iLoadTheDOMInformation("Principal.json");
+        functions.scrollToElement("Revicion");
+        functions.iClicInElement("Revicion");
+
        functions.scrollToElement("area");
        functions.iClicInElement("area");
        functions.iSelectContainsText("listadespegable", area);
@@ -267,9 +303,11 @@ public class PropertiesScenario {
 
     @Cuando("adjuntar archivo xlsx")
     public void adjuntararchivoxlsx() throws Exception {
+        functions.iWaitTime(3);
         functions.iLoadTheDOMInformation("Principal.json");
-        functions.SaveInScenarioFile("documento", "xlsx");
-        functions.iSetElementWithKeyValue("adjuntarxlsx", "documento");
+        functions.SaveInScenarioFile("prueba", "xlsx");
+        functions.iSetElementWithKeyValue("adjuntarCDPxlsx", "prueba");
+
     }
 
     @Entonces("filtrar numero requerimiento")

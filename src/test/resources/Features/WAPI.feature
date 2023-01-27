@@ -22,7 +22,7 @@ Característica: El usuario crea y añade CDPs/RPs
     #Crear requerimiento
 
     Dado seleccionar "Nuevo"
-    Cuando agregamos Numero de requerimiento "7" y dependencia destino "000000"
+    Cuando agregamos Numero de requerimiento "45" y dependencia destino "000000"
     Entonces agregar fecha estiamdo inicio "Enero", mes estiamdo presentacion "Febrero" y mes inicio ejecucion "Junio"
 
     Dado ingresar la duracion estimada del contrato Mes "11" Dias "9"
@@ -71,7 +71,7 @@ Característica: El usuario crea y añade CDPs/RPs
     Cuando revisar requermiento
     Entonces agregar area "Planeación", concepto "Aprobado" y una observacion "El requerimiento cumple todas lo solicitado"
 
-    Dado seleccionar "Anadir"
+    Dado seleccionar "anadir"
     Cuando seleccionar "Revisado"
     Entonces cerrar sesion
 
@@ -88,9 +88,6 @@ Característica: El usuario crea y añade CDPs/RPs
     Dado agregar un comentario de la revision "Prueba"
     Cuando seleccionar "Aprobar"
     Entonces seleccionar "Aceptar"
-
-  @ImportarCDPsRPs
-  Escenario: El usuario importa CDPs
 
     Dado Ingresamos a la pantalla "PAA"
     Cuando adjuntar archivo xlsx

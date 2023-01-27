@@ -716,7 +716,6 @@ public class SeleniumFunctions {
 
     public void iClicInElement(String element) throws Exception {
         By SeleniumElement = SeleniumFunctions.getCompleteElement(element);
-
         for (int retry = 0; retry < 3; retry++) {
             try {
                 driver.findElement(SeleniumElement).click();

@@ -319,6 +319,7 @@ public class PropertiesScenario {
         functions.iClicInElement("Buscar Por:");
         functions.scrollToElement("codigorequerimiento");
         functions.iSetElementWithKeyValue("codigorequerimiento", "numeroreq");
+        //functions.iSetElementWithText("codigorequerimiento", "200");
         functions.scrollToElement("Filtrar");
         functions.iClicInElement("Filtrar");
         functions.iWaitTime(2);
@@ -328,5 +329,29 @@ public class PropertiesScenario {
     public void ingresaralRPs() throws Exception {
         functions.iLoadTheDOMInformation("Principal.json");
         functions.iClicInElement("RPs");
+    }
+
+    @Entonces("validar dependencia distribuir sea 0")
+    public void validardependenciadistribuir0() throws Exception {
+        functions.iLoadTheDOMInformation("Principal.json");
+        functions.iSaveTextOfElementInScenario("ValorDependencia", "PendienteD");
+        String valordependencia = functions.ScenaryData.get("ValorDependencia");
+
+        if (valordependencia.equals("$0")){
+            functions.scrollToElement("Regresar");
+            functions.iClicInElement("Regresar");
+        }else{
+            functions.iSaveTextOfElementInScenario("ValorDistribuir", "Distribuir");
+            functions.iSetElementWithKeyValue("ValorDistribuidos", "ValorDistribuir");
+            functions.iWaitTime(2);
+            functions.scrollToElement("Guardar");
+            functions.iClicInElement("Guardar");
+        }
+    }
+
+    @Dado("seleccionar CDPS")
+    public void seleccionarCDPS() throws Exception {
+        functions.iLoadTheDOMInformation("Principal.json");
+        functions.iClicInElement("seleccionarCDPs");
     }
 }

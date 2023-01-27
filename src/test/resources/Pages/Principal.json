@@ -159,9 +159,14 @@
     "ValueToFind": "//mat-select[@formcontrolname='actividad']"
   },
 
-  "anadir": {
+  "Anadir": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "(//button/span[contains(.,'ADIR')])[1]"
+    "ValueToFind": "(//mat-expansion-panel//mat-expansion-panel-header[contains(.,'Presupuestal')]/../div//button)[1]|(//mat-expansion-panel//mat-expansion-panel-header[contains(.,'Revisiones')]/../div//button)[1]"
+  },
+
+  "Anadi": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//mat-expansion-panel//mat-expansion-panel-header[contains(.,'UNSPSC')]/../div//button"
   },
 
   "editarcadena": {
@@ -189,14 +194,9 @@
     "ValueToFind": "//input[@formcontrolname='codCategoria']"
   },
 
-  "anadi": {
-    "GetFieldBy": "Xpath",
-    "ValueToFind": "(//button/span[contains(.,'ADIR')])[2]"
-  },
-
   "Guardar": {
     "GetFieldBy": "Xpath",
-    "ValueToFind": "(//button/span[contains(.,'GUARDAR')])"
+    "ValueToFind": "(//button/span[contains(.,'GUARDAR')])|//button[contains(.,'guardar')]|(//button/span[contains(.,'Guardar')])"
   },
 
   "justificacion": {
@@ -207,11 +207,6 @@
   "adjuntar": {
     "GetFieldBy": "Xpath",
     "ValueToFind": "//input[@type='file']"
-  },
-
-  "Guarda": {
-    "GetFieldBy": "Xpath",
-    "ValueToFind": "(//button/span[contains(.,'Guardar')])"
   },
 
   "solicitudM": {
@@ -347,5 +342,40 @@
   "Revicion": {
     "GetFieldBy": "Xpath",
     "ValueToFind": "(//mat-expansion-panel-header)[9]"
+  },
+
+  "PendienteD": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//p[contains(.,'Pendiente por distribuir')]/../input"
+  },
+
+  "Regresar": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//button[contains(.,'Regresar')]"
+  },
+
+  "Distribuir": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//p[contains(.,'Valor a distribuir')]/../input"
+  },
+
+  "ValorDistribuidos": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//td/input"
+  },
+
+  "Notificar": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//button/span[contains(.,'NOTIFICAR')]"
+  },
+
+  "seleccionarCDPs": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "(//span/input)[1]"
+  },
+
+  "Habilitar": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//button/span[contains(.,'HABILITAR')]"
   }
 }

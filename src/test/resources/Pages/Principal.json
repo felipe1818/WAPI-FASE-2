@@ -195,6 +195,7 @@
   },
 
   "Guardar": {
+  "Guardar": {
     "GetFieldBy": "Xpath",
     "ValueToFind": "(//button/span[contains(.,'GUARDAR')])|//button[contains(.,'guardar')]|(//button/span[contains(.,'Guardar')])"
   },
@@ -377,5 +378,16 @@
   "Habilitar": {
     "GetFieldBy": "Xpath",
     "ValueToFind": "//button/span[contains(.,'HABILITAR')]"
+  },
+
+  "Giros": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//mat-icon[contains(.,' autorenew ')]"
+  },
+
+  "DistribuirGiros": {
+    "GetFieldBy": "Xpath",
+    "ValueToFind": "//p[contains(.,'Valor orden de pago')]/../input"
   }
+
 }

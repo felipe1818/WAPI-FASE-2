@@ -86,11 +86,11 @@ public class PropertiesScenario {
         functions.iLoadTheDOMInformation("Principal.json");
         functions.iSetElementWithText("numerorequerimiento", numerorequerimiento);
         functions.iSaveTextOfElementInScenario("numeroreq", "numerorequerimiento");
-        functions.iWaitTime(1);
+
 
         functions.iSetElementWithText("dependenciadestino", dependenciadestino);
         functions.iSelectContainsText("listadespegable", dependenciadestino);
-        functions.iWaitTime(1);
+
     }
 
     @Entonces("agregar fecha estiamdo inicio {string}, mes estiamdo presentacion {string} y mes inicio ejecucion {string}")
@@ -120,12 +120,12 @@ public class PropertiesScenario {
         functions.scrollToElement("modalidadseleccion");
         functions.iClicInElement("modalidadseleccion");
         functions.iSelectContainsText("listadespegable", modalidadseleccion);
-        functions.iWaitTime(1);
+
 
         functions.scrollToElement("actuacioncontractual");
         functions.iClicInElement("actuacioncontractual");
         functions.iSelectContainsText("listadespegable", actuacioncontractual);
-        functions.iWaitTime(1);
+
     }
 
     @Entonces("ingresar tipo contrato {string} perfil {string} valor Honorario {string}")
@@ -134,16 +134,16 @@ public class PropertiesScenario {
         functions.scrollToElement("tipocontrato");
         functions.iClicInElement("tipocontrato");
         functions.iSelectContainsText("listadespegable", tipocontrato);
-        functions.iWaitTime(1);
+
 
         functions.scrollToElement("perfil");
         functions.iClicInElement("perfil");
         functions.iSelectContainsText("listadespegable", perfil);
-        functions.iWaitTime(1);
+
 
         functions.scrollToElement("valorhonorario");
         functions.iSetElementWithText("valorhonorario", valorhonorario);
-        functions.iWaitTime(1);
+
     }
 
     @Dado("ingresar contidad contratos {string} y descripcion {string}")
@@ -151,11 +151,11 @@ public class PropertiesScenario {
         functions.iLoadTheDOMInformation("Principal.json");
         functions.scrollToHorizontal("cantidadcontrato");
         functions.iSetElementWithText("cantidadcontrato", cantidadcontrato);
-        functions.iWaitTime(1);
+
 
         functions.scrollToHorizontal("descripcion");
         functions.iSetElementWithText("descripcion", descripcion);
-        functions.iWaitTime(1);
+
 
         //functions.iClicInElement("informacionBasicaProyecto");
     }
@@ -349,9 +349,37 @@ public class PropertiesScenario {
         }
     }
 
+    @Entonces("validar giros dependencia distribuir sea 0")
+    public void validargirosdependenciadistribuir0() throws Exception {
+        functions.iLoadTheDOMInformation("Principal.json");
+        functions.iSaveTextOfElementInScenario("ValorDependencia", "PendienteD");
+        String valordependencia = functions.ScenaryData.get("ValorDependencia");
+
+        if (valordependencia.equals("$0")){
+            functions.scrollToElement("Regresar");
+            functions.iClicInElement("Regresar");
+        }else{
+            functions.iSaveTextOfElementInScenario("ValorDistribuir", "DistribuirGiros");
+            functions.iSetElementWithKeyValue("ValorDistribuidos", "ValorDistribuir");
+            functions.iWaitTime(2);
+            functions.scrollToElement("Guardar");
+            functions.iClicInElement("Guardar");
+            functions.iWaitTime(2);
+            functions.scrollToElement("Aceptar");
+            functions.iClicInElement("Aceptar");
+        }
+    }
+
     @Dado("seleccionar CDPS")
     public void seleccionarCDPS() throws Exception {
         functions.iLoadTheDOMInformation("Principal.json");
         functions.iClicInElement("seleccionarCDPs");
+    }
+
+    @Cuando("adjuntar archivo giros xlsx")
+    public void adjuntaarchivogiros() throws Exception {
+        functions.iLoadTheDOMInformation("Principal.json");
+        functions.SaveInScenarioFiles("prueba", "xlsx");
+        functions.iSetElementWithKeyValue("adjuntarGIROSxlsx", "prueba");
     }
 }

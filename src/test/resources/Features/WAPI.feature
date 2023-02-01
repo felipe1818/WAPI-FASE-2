@@ -22,7 +22,7 @@ Característica: El usuario crea y añade CDPs/RPs
     #Crear requerimiento
 
     Dado seleccionar "Nuevo"
-    Cuando agregamos Numero de requerimiento "202" y dependencia destino "000000"
+    Cuando agregamos Numero de requerimiento "204" y dependencia destino "000000"
     Entonces agregar fecha estiamdo inicio "Enero", mes estiamdo presentacion "Febrero" y mes inicio ejecucion "Junio"
 
     Dado ingresar la duracion estimada del contrato Mes "11" Dias "9"
@@ -113,14 +113,24 @@ Característica: El usuario crea y añade CDPs/RPs
 
     Dado Ingresar usuario "userwapi02@saludcapital.gov.co" y  contraseña "112233"
     Cuando Ingresamos a la pantalla "PAA"
-    Entonces filtramos codigo del proyecto "7835"
+    Entonces adjuntar archivo giros xlsx
 
-    Dado seleccionamos proyecto
-    Cuando filtrar numero requerimiento
-    Entonces seleccionar "CDPs"
+    Dado seleccionar "Aceptar"
+    Cuando cerrar sesion
+    Entonces Ingresar usuario "userwapi01@saludcapital.gov.co" y  contraseña "112233"
 
-    Dado seleccionar CDPS
-    Cuando seleccionar "Habilitar"
+    Dado Ingresamos a la pantalla "PAA"
+    Cuando filtramos codigo del proyecto "7835"
+    Entonces seleccionamos proyecto
+
+    Dado filtrar numero requerimiento
+    Cuando seleccionar "Giros"
+    Entonces seleccionar "Giros"
+
+    Dado validar giros dependencia distribuir sea 0
+    Cuando seleccionar "Notificar"
     Entonces seleccionar "Aceptar"
 
-    Dado cerrar sesion
+
+
+

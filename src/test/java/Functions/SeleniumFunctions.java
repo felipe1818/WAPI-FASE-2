@@ -1184,8 +1184,8 @@ public class SeleniumFunctions {
         //long numer = System.currentTimeMillis();
 
         //String fileName = ("Prueba-" + numer);
-        String fileName = "Prueba";
-        Path originalPath = Paths.get(("src/test/resources/Files/Base/Prueba." + format + ""));
+        String fileName = "Prueba1";
+        Path originalPath = Paths.get(("src/test/resources/Files/Base/Prueba1." + format + ""));
         Path text = Paths.get("src/test/resources/Files/" + fileName + "." + format + "");
 
         String ruta0 = directoryName.replace("target/test-classes/", "") + text.toString();

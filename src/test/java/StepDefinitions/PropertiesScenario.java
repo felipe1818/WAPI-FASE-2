@@ -84,12 +84,23 @@ public class PropertiesScenario {
     @Cuando("agregamos Numero de requerimiento {string} y dependencia destino {string}")
     public void agregamosnumerorequerimeitndependencia(String numerorequerimiento, String dependenciadestino) throws Exception {
         functions.iLoadTheDOMInformation("Principal.json");
-        functions.iSetElementWithText("numerorequerimiento", numerorequerimiento);
-        functions.iSaveTextOfElementInScenario("numeroreq", "numerorequerimiento");
-
-
-        functions.iSetElementWithText("dependenciadestino", dependenciadestino);
-        functions.iSelectContainsText("listadespegable", dependenciadestino);
+        //functions.iClicInElement("informacionBasica");
+        functions.iSetElementWithText("requerimeinto", numerorequerimiento);
+        try{
+            functions.checkIfElementIsPresent("//mat-error/strong[contains(.,'Numero de Requerimiento No Disponible')]");
+            String numeroRequerimiento = String.valueOf((int)(Math.random()*500+1));
+            functions.iSendClearToElement("requerimeinto");
+            functions.iSetElementWithText("requerimeinto", numeroRequerimiento);
+            functions.iSendClearToElement("dependencia");
+            functions.iSetElementWithText("dependencia", dependenciadestino);
+            functions.iSelectContainsText("listadespegable", dependenciadestino);
+        }catch (Exception e){
+            functions.iSendClearToElement("requerimeinto");
+            functions.iSetElementWithText("requerimeinto", numerorequerimiento);
+            functions.iSendClearToElement("dependencia");
+            functions.iSetElementWithText("dependencia", dependenciadestino);
+            functions.iSelectContainsText("listadespegable", dependenciadestino);
+        }
 
     }
 
